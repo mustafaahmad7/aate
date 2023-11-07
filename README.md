@@ -32,6 +32,6 @@ frappe.listview_settings['Employee Checkin'] = {
 
 ### > This will make a Button In The Employee Checkin List View that will Redirect to the Employee Location page
 
-### > After That you can install the `alansaridigital` app and it will show you the location.
+### > After That you can install the `aate` app and it will show you the location.
 
 ### For The Employee Attendance No prerequisities are required.
