@@ -4,7 +4,7 @@
  "docstatus": 0,
  "doctype": "Page",
  "idx": 0,
- "modified": "2023-11-07 16:26:40.350845",
+ "modified": "2023-11-14 10:35:22.919249",
  "modified_by": "Administrator",
  "module": "AATE",
  "name": "employee-location",
@@ -15,5 +15,5 @@
  "standard": "Yes",
  "style": null,
  "system_page": 1,
- "title": "Location Of Employees"
+ "title": "Employee Location"
 }

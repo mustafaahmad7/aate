@@ -4,7 +4,11 @@ import frappe
 @frappe.whitelist()
 def emploc():
     loc = frappe.db.sql(
-        """SELECT employee, employee_name , device_id, time FROM `tabEmployee Checkin` WHERE log_type = 'IN';""", as_dict=True)
+        """SELECT ec.employee, ec.employee_name, ec.device_id, ec.time, e.department, e.payroll_cost_center, f.file_url
+           FROM `tabEmployee Checkin` ec
+           INNER JOIN `tabEmployee` e ON ec.employee = e.name
+           LEFT JOIN `tabFile` f ON f.attached_to_name = e.user_id AND (f.file_url LIKE '%.png' OR f.file_url LIKE '%.jpg') AND f.attached_to_field = 'user_image'
+           WHERE ec.log_type = 'IN';""", as_dict=True)
 
     for entry in loc:
         device_id = entry.get('device_id', '')
